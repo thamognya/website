@@ -26,7 +26,15 @@ makefile-update:
 .PHONY: thamognya-update
 thamognya-update:
 	exec ./scripts/thamognya-compile.sh
+	$(RSYNC_COMMAND) $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	git add .
+	git commit -m 'thamognya-update auto update'
+	git remote | xargs -L1 git push --all
 
 .PHONY: blog-update
 blog-update:
 	exec ./scripts/blog-compile.sh
+	$(RSYNC_COMMAND) $(SOURCE_DIR_ALL) $(USER)@$(WEBSITE):$(WEBSITE_DIR)
+	git add .
+	git commit -m 'blog-update auto update'
+	git remote | xargs -L1 git push --all
