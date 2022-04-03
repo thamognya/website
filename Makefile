@@ -9,6 +9,8 @@ RSYNC_COMMAND := rsync -urvP --exclude '*-src'
 .PHONY: download
 download:
 	scp -r $(USER)@$(WEBSITE):$(WEBSITE_DIR_ALL) $(SOURCE_DIR)
+	git clone git@github.com:ThamognyaKodi/www.thamognya.com.git ./src/thamognya-src/
+	git clone git@github.com:ThamognyaKodi/blog.thamognya.com.git ./src/thamognya-src/
 
 .PHONY: update
 update:
