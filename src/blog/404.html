@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+        
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+
+        <meta name="google" content="nositelinkssearchbox">
+        <meta name="google" content="notranslate">
+        
+
+        
+        
+        
+
+        
+        <link href="https://blog.thamognya.com/style.css" rel="stylesheet"/>
+        
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function evaluate_prefers_color() {
+                if(localStorage.getItem('prefers-color') === 'dark') {
+                    document.body.classList.add('dark');
+                } else if(localStorage.getItem('prefers-color') === 'light') {
+                    document.body.classList.remove('dark');
+                } else if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.body.classList.add('dark');
+                }
+            }
+            evaluate_prefers_color();
+        </script>
+        
+    404
+
+        <footer>
+            <hr text="&copy; Copyright 2022" />
+            
+            <div class="footer-social-media">
+                <a onclick="toggle_prefers_color()">Toggle Theme</a>
+                
+                    <a href="https://github.com/ThamognyaKodi" target="_blank">GitHub</a>
+                
+                    <a href="https://gitlab.com/ThamognyaKodi" target="_blank">GitLab</a>
+                
+                    <a href="https://www.reddit.com/user/Meliodas_real" target="_blank">Reddit</a>
+                
+                    <a href="mailto:contact@thamognya.com" target="_blank">Email</a>
+                
+            </div>
+            
+        </footer>
+    </body>
+
+    
+        <script src="https://blog.thamognya.com/js/script.js"/></script>
+    
+</html>
